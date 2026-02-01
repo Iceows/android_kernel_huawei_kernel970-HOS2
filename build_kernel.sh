@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# put the clang in the right path.
-# put the clang-r346389c in the $(kernel directory)/../../prebuilts/clang/host/linux-x86 path
+# Please clone this two repo before
+#
+# git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9 -b lineage-19.1 /media/iceows/Sauvegardes/iceows/Compiler/Google/GCC64
+# git clone https://github.com/Iceows/android_prebuilts_clang_host_linux-x86_clang-r353983c /media/iceows/Sauvegardes/iceows/Compiler/Google/Clang/clang-r353983c
+#
+
 
 # Special Clean For Huawei Kernel.
 if [ -d include/config ];
@@ -12,12 +16,14 @@ else
 	echo "No Config,good."
 fi
 
+export HOME_COMPILER=/media/iceows/Sauvegardes/iceows/Compiler/Google
+
 # Declare path export
-export PATH=$PATH:$(pwd)/../Compiler/Google/GCC64/bin:$(pwd)/../Compiler/Google/Clang/clang-r353983c/bin
+export PATH=$PATH:$HOME_COMPILER/GCC64/bin:$HOME_COMPILER/Clang/clang-r353983c/bin
 
 # Declare CLANG et LD_LIBRARY
-export CLANG_PREBUILTS_PATH=$(pwd)/../Compiler/Google/Clang/clang-r353983c/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/../Compiler/Google/Clang/clang-r353983c/lib64/
+export CLANG_PREBUILTS_PATH=$HOME_COMPILER/Clang/clang-r353983c/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME_COMPILER/Clang/clang-r353983c/lib64/
 
 export CROSS_COMPILE=aarch64-linux-android-
 export GCC_COLORS=auto
