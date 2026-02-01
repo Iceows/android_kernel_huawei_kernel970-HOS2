@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Please clone this two repo before
+# need clang-r353983c for Android Q release and aarch64_aarch64-linux-android-4.9 prebuilts
 #
 # git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9 -b lineage-19.1 /media/iceows/Sauvegardes/iceows/Compiler/Google/GCC64
 # git clone https://github.com/Iceows/android_prebuilts_clang_host_linux-x86_clang-r353983c /media/iceows/Sauvegardes/iceows/Compiler/Google/Clang/clang-r353983c
@@ -23,7 +24,7 @@ export PATH=$PATH:$HOME_COMPILER/GCC64/bin:$HOME_COMPILER/Clang/clang-r353983c/b
 
 # Declare CLANG et LD_LIBRARY
 export CLANG_PREBUILTS_PATH=$HOME_COMPILER/Clang/clang-r353983c/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME_COMPILER/Clang/clang-r353983c/lib64/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CLANG_PREBUILTS_PATH/lib64/
 
 export CROSS_COMPILE=aarch64-linux-android-
 export GCC_COLORS=auto
