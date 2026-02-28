@@ -25,6 +25,8 @@
 #include "tc_ns_client.h"
 #include "tc_ns_log.h"
 
+#define TC_DEBUG
+
 #define TC_NS_CLIENT_IOC_MAGIC  't'
 #define TC_NS_CLIENT_DEV        "tc_ns_client"
 #define TC_NS_CLIENT_DEV_NAME   "/dev/tc_ns_client"
