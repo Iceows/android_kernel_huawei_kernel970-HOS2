@@ -29,7 +29,6 @@
 #include <linux/timer.h>
 #include <linux/wait.h>
 #include <linux/version.h>
-#include <linux/ion.h>
 #include <linux/cma.h>
 #include <linux/module.h>
 #include <linux/init.h>

@@ -28,7 +28,6 @@
 #include <linux/debugfs.h>
 #include <linux/module.h>
 #include <linux/version.h>
-#include <linux/ion.h>
 #include <linux/mm.h>
 #include <linux/cma.h>
 #include <linux/hisi/hisi_ion.h>
